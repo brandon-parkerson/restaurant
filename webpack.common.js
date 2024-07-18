@@ -5,6 +5,9 @@ const path = require('path');
    entry: {
      app: './src/index.js',
    },
+   devServer: {
+    static: './dist',
+  },
    plugins: [
      new HtmlWebpackPlugin({
        title: 'Production',
@@ -16,4 +19,7 @@ const path = require('path');
      path: path.resolve(__dirname, 'dist'),
      clean: true,
    },
+   optimization: {
+    runtimeChunk: 'single',
+  },
  };
