@@ -5,9 +5,7 @@ const path = require('path');
    entry: {
      app: './src/index.js',
    },
-   devServer: {
-    static: './dist',
-  },
+   
    plugins: [
      new HtmlWebpackPlugin({
        title: 'Production',
@@ -32,6 +30,10 @@ const path = require('path');
        test: /\.(png|svg|jpg|jpeg|gif)$/i,
        type: 'asset/resource',
      },
+     {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+    },
     ],
   },
  };

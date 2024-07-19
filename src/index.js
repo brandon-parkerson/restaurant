@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     loadButtons();
     loadTable();
+    loadQuote();
 
 });
 
@@ -34,7 +35,10 @@ function loadTable() {
     content.appendChild(imgElement);
 };
 
-// function loadQuote() {
-//     const quote = document.createElement(p)
-// }
+function loadQuote() {
+    const quote = document.createElement("p");
+    quote.classList.add("quote");
+    quote.innerText = `"This is the greatest restaurant to ever exist in the history of the world." \n -Gordon Ramsey`;
+    content.appendChild(quote);
+};
 

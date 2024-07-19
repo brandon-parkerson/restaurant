@@ -1,3 +1,16 @@
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: robotoMedium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: robotoItalic;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,6 +28,8 @@ body {
     flex-direction: column;
     background-color: #393E46;
     
+    align-items: center;
+    
 }
 
 nav {
@@ -22,12 +37,13 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    background-color: #00ADB5;
+    background-color: white;
     height: 8vh;
 }
 
 .title {
     text-align: center;
+    font-family: bebas;
 }
 
 .table {
@@ -35,6 +51,7 @@ nav {
     margin-right: auto;
     width: auto;
     height: 200px;
+    margin-bottom: 15px;
 }
 
 button {
@@ -43,6 +60,7 @@ button {
     height: 40px;
     width: 80px;
     background-color: #393E46;
+    font-family: robotoMedium;
 }
 
 button:hover {
@@ -54,4 +72,11 @@ button:hover {
 
 .title {
     margin-bottom: 25px;
+}
+
+.quote {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: robotoItalic;
 }
