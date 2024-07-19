@@ -11,6 +11,9 @@
     src: url(../fonts/Roboto-LightItalic.ttf);
 }
 
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,15 +23,16 @@
 body {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-between;
 }
 
 #content {
     display: flex;
     flex-direction: column;
     background-color: #393E46;
-    
+    height: 100vh;
     align-items: center;
+    
     
 }
 
@@ -44,6 +48,7 @@ nav {
 .title {
     text-align: center;
     font-family: bebas;
+    font-size: 100px;
 }
 
 .table {
@@ -65,7 +70,7 @@ button {
 
 button:hover {
     background-color: #4c535e;
-    box-shadow: 0px 0px 35px #4c535e;
+    box-shadow: 0px 0px 35px black;
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -79,4 +84,47 @@ button:hover {
     font-size: 20px;
     text-align: center;
     font-family: robotoItalic;
+}
+
+h2 {
+    font-family: robotoMedium;
+}
+
+.hours-section {
+    background-color: #222831;
+    border: 1px solid #222831;
+    border-radius: 15px;
+    text-align: center;
+    width: 25vw;
+}
+
+.hours-content {
+    font-family: robotoItalic, sans-serif;
+}
+
+.hours-section {
+    margin-top: 65px;
+    width: 20%;
+    height: 25%;
+    min-height: auto;
+    line-height: 1.5em;
+}
+
+.location-section {
+    margin-top: 65px;
+    height: 15%;
+    width: 20%;
+    background-color: #222831;
+    border: 1px solid #222831;
+    border-radius: 15px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    height: 8vh;
 }
