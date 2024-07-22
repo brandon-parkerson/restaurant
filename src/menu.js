@@ -1,6 +1,17 @@
+const content = document.querySelector("#content");
+
 
 export function loadMenu() {
-    // const content = document.querySelector("#content");
-    // content.innerHTML = "";
-    alert("menu");
+    content.innerHTML = "";
+
+    loadTitle();
+    
+};
+
+function loadTitle() {
+    const title = document.createElement("h1");
+    title.classList.add("title");
+    
+    title.textContent = "Menu";
+    content.appendChild(title);
 };
