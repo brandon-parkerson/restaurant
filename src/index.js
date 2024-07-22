@@ -2,17 +2,13 @@ import './style.css';
 import table from './diner-background.jpg';
 import { loadMenu } from './menu';
 
-
-
 const header = document.querySelector(".header");
 const navigation = document.querySelector(".nav");
 const content = document.getElementById("content");
 const imgElement = document.createElement("img");
 
-
 document.addEventListener('DOMContentLoaded', () => {
     loadHome();
-
 });
 
 function loadButtons() {
@@ -33,21 +29,22 @@ function loadButtons() {
 
     header.appendChild(navigation);
 
-    
-};
+    // Ensure event listeners are added after buttons are created
+    listenButtons();
+}
 
 function loadTable() {
     imgElement.src = table;
     imgElement.classList.add("table");
     content.appendChild(imgElement);
-};
+}
 
 function loadQuote() {
     const quote = document.createElement("p");
     quote.classList.add("quote");
     quote.innerText = `"This is the greatest restaurant to ever exist in the history of the world." \n -Gordon Ramsey`;
     content.appendChild(quote);
-};
+}
 
 function loadHours() {
     const hoursSection = document.createElement("div");
@@ -58,13 +55,11 @@ function loadHours() {
     hoursHeader.innerText = "Hours:";
     hoursContent.innerText = `Sunday: 8AM - 3PM \n Monday: 6AM - 3PM \n Tuesday: 6AM - 3PM \n Wednesday: 6AM - 3PM \n Thursday: 6AM - 3PM 
     Friday: 6AM - 3PM \n Saturday: 8AM - 3PM`;
-    
-    
 
     hoursSection.appendChild(hoursHeader);
     hoursSection.appendChild(hoursContent);
     content.appendChild(hoursSection);
-};
+}
 
 function loadLocation() {
     const locationSection = document.createElement("div");
@@ -78,7 +73,7 @@ function loadLocation() {
     locationSection.appendChild(locationHeader);
     locationSection.appendChild(locationContent);
     content.appendChild(locationSection);
-};
+}
 
 function listenButtons() {
     const menuButton = document.querySelector(".menu");
@@ -87,25 +82,26 @@ function listenButtons() {
 
     menuButton.addEventListener("click", loadMenu);
     homeButton.addEventListener("click", loadHome);
-};
+}
 
 function loadTitle() {
     const title = document.querySelector(".title");
-    title.innerText = "";
-    title.innerText = "Brandon's Breakfast Diner";
+    if (!title) {
+        const newTitle = document.createElement("h1");
+        newTitle.classList.add("title");
+        newTitle.innerText = "Brandon's Breakfast Diner";
+        content.prepend(newTitle);
+    } else {
+        title.innerText = "Brandon's Breakfast Diner";
+    }
 }
 
 function loadHome() {
+    content.innerHTML = ""; // Clear the content section before loading home content
     loadButtons();
     loadTitle();
     loadTable();
     loadQuote();
     loadHours();
     loadLocation();
-    listenButtons();
-    
-};
-
-
-
-
+}
