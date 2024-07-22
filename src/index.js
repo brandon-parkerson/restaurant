@@ -1,5 +1,6 @@
 import './style.css';
 import table from './diner-background.jpg';
+import { loadMenu } from './menu';
 
 const header = document.querySelector(".header");
 const navigation = document.querySelector(".nav");
@@ -14,13 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
     loadQuote();
     loadHours();
     loadLocation();
+    listenButtons();
 
 });
 
 function loadButtons() {
     const btnHome = document.createElement("button");
+    btnHome.classList.add("home");
     const btnMenu = document.createElement("button");
+    btnMenu.classList.add("menu");
     const btnAbout = document.createElement("button");
+    btnAbout.classList.add("about");
     btnHome.innerText = "Home";
     btnMenu.innerText = "Menu";
     btnAbout.innerText = "About";
@@ -30,6 +35,8 @@ function loadButtons() {
     navigation.appendChild(btnAbout);
 
     header.appendChild(navigation);
+
+    
 };
 
 function loadTable() {
@@ -74,5 +81,13 @@ function loadLocation() {
     locationSection.appendChild(locationHeader);
     locationSection.appendChild(locationContent);
     content.appendChild(locationSection);
-}
+};
+
+function listenButtons() {
+    const menuButton = document.querySelector(".menu");
+    menuButton.addEventListener("click", loadMenu);
+};
+
+
+
 

@@ -120,11 +120,3 @@ h2 {
     text-align: center;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    background-color: white;
-    height: 8vh;
-}
