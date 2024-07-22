@@ -89,13 +89,21 @@ function listenButtons() {
     homeButton.addEventListener("click", loadHome);
 };
 
+function loadTitle() {
+    const title = document.querySelector(".title");
+    title.innerText = "";
+    title.innerText = "Brandon's Breakfast Diner";
+}
+
 function loadHome() {
     loadButtons();
+    loadTitle();
     loadTable();
     loadQuote();
     loadHours();
     loadLocation();
     listenButtons();
+    
 };
 
 
