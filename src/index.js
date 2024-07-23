@@ -1,6 +1,7 @@
 import './style.css';
 import table from './diner-background.jpg';
 import { loadMenu } from './menu';
+import { loadAbout } from './about';
 
 const header = document.querySelector(".header");
 const navigation = document.querySelector(".nav");
@@ -82,6 +83,7 @@ function listenButtons() {
 
     menuButton.addEventListener("click", loadMenu);
     homeButton.addEventListener("click", loadHome);
+    aboutButton.addEventListener("click", loadAbout);
 }
 
 function loadTitle() {
