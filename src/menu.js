@@ -6,6 +6,7 @@ export function loadMenu() {
     loadTitle();
     loadMenuContent();
     drinkList();
+    loadMains();
     
 };
 
@@ -26,14 +27,38 @@ function loadMenuContent() {
 };
 
 function drinkList() {
-    
+    const drinksSection = document.createElement("div");
+    drinksSection.classList.add("drinks-section");
     const drinks = document.createElement("p");
-    drinks.innerText = `Coke
-    Coffee
-    Orange Juice`;
+    drinks.classList.add("drinks");
+
+    drinks.innerText = `Coke $1
+    Coffee $1
+    Orange Juice $2
+    Lemonade $3`;
+    
 
     
-    content.appendChild(drinks);
-    // TODO: Finish drink list and other food items. Design the menu item text.
+    drinksSection.appendChild(drinks);
+    content.appendChild(drinksSection);
+}
 
+function loadMains() {
+    const mainSection = document.createElement("div");
+    mainSection.classList.add("main-section");
+    const mains = document.createElement("p");
+    mains.classList.add("mains");
+
+    mains.innerText = `Brandon's Favorite... $20
+    Bacon & Eggs... $15
+    Pancakes... $15
+    Waffles... $10
+    Breakfast Sandwich... $20
+    
+    Apple Pie... $5
+    Cheesecake... $7
+    Ice-Cream Sunday... $8`;
+
+    mainSection.appendChild(mains);
+    content.appendChild(mainSection);
 }

@@ -123,3 +123,40 @@ h2 {
 .drinks-title {
     font-family: robotoMedium;
 }
+
+p {
+    font-family: robotoMedium;
+}
+
+.drinks-section {
+    background-color: #222831;
+    border: 1px solid #222831;
+    border-radius: 15px;
+    text-align: center;
+    width: 15vw;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drinks {
+    line-height: 1.5em;
+}
+
+.main-section {
+    background-color: #222831;
+    border: 1px solid #222831;
+    border-radius: 15px;
+    text-align: center;
+    width: 15vw;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.mains {
+    line-height: 1.5em;
+}
